@@ -1,0 +1,22 @@
+ /*--------------------------------
+		login css start 
+----------------------------------*/ 
+.container-login100 {/* width: 50%; min-height: 100%;*/ display: flex; align-items: normal;   margin: 0 auto; box-shadow: 0px 11px 19px -6px rgba(0,0,0,0.25); border-radius: 8px; background: var(--main-background_active); background: -moz-linear-gradient(45deg, var(--main-background_active) 1%, var(--main-background_active) 100%); background: -webkit-linear-gradient(45deg, var(--main-background_active) 1%,var(--main-background_active) 100%); background: linear-gradient(45deg, var(--main-background_active) 1%,var(--main-background_active) 100%); filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='var(--main-background_active) ', endColorstr='var(--main-background_active)',GradientType=1 );}
+.wrap-login100 {padding: 15px 25px; background: #fff;}
+.loginradius{border-bottom-left-radius: 7px;     border-top-left-radius: 7px;}
+.right-bar-signup {width: 50%; text-align: center; color: white; padding: 35px 35px;}
+.signupdata {display: inline-block; padding: 10px 25px; border-radius: 50px; border: 2px solid #f5f7fa; color: #202020; font-weight: 600;}
+.signupdata:hover{border: 2px solid #c3c3c3; color: #202020}
+.signup-icon a:hover{text-decoration: none;}
+.signupdata img {width: 24px; position: relative; top: -1px; margin-right: 5px; }  
+.social-login__divider-text {color: inherit; font-size: 0.875rem; line-height: 1.25rem; display: inline; position: relative; padding: 0 0.75rem; background: #fff; color: #9e9e9e; z-index: 1; }
+.social-login__divider-line {position: absolute; top: 50%; width: 100%; height: 1px; margin: 0; border-bottom: 0; background: #e7e7e7; z-index: 0; }
+.social-login__divider {position: relative; margin: 1.25rem 0 0.875rem; text-align: center; }
+.newhere {text-transform: uppercase;}
+.forgot-text{color: var(--main-black_text);}
+.login-right-info {position: relative; top: 25%;}
+
+
+/*--------------------------------
+		login css end
+----------------------------------*/

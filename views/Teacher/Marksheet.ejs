@@ -1,0 +1,209 @@
+<%- include('./partials/Teacher_header.ejs') %>
+<% let first_array = []%>
+  <% success.forEach(function(msg){ %>
+      
+          <%first_array.push(msg)%>
+
+
+      <% }) %>
+      <% let second_array = []%>
+
+      <% errors.forEach(function(err){ %>
+
+              <%second_array.push(err)%>
+
+          <% }) %>
+
+
+        <div class="content-wrapper mt-5">
+            <!-- Welcome to  -->
+            <div class="page-content pt-5 pb-3 box-mainsection">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-xl-2 col-lg-3 col-md-4 mb-3 "> 
+                            <div class="white-box sidebar sticky-sidebar">
+                                <div class="card card-default">
+                                    <div class="box-card-title">
+                                        <div class="p-3 card-box-title">
+                                            <h6 class="m-0 text-color">
+                                                <strong>Services</strong>
+                                                <!-- <a href="javascript:void(0);" class="viewall-btn"><small>View all</small></a> -->
+                                            </h6>
+                                        </div>                            
+                                    </div>
+                                    <%- include('./partials/Teacher_Menu.ejs') %>
+
+                                </div> 
+                            </div> 
+
+                        </div>
+
+                        <div class="col-xl-10 col-lg-9 col-md-8">
+                            <div class="right-bar">  
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="white-box mt-2">
+                                            <div class="card card-default">
+                                                <!-- <div class="box-card-title">
+                                                    <div class="p-3 card-box-title">
+                                                        <h5 class="m-0 d-flex justify-content-between">
+                                                            <strong>Recent Visitorz </strong>
+                                                            <a href="javascript:void(0);" class="viewall-btn"><small>View all</small></a>
+                                                        </h5>
+                                                    </div>                            
+                                                </div> -->
+                                                <div class="entries-data-box p-4">
+                                                    <div class="row">
+                                                        <div class="col-md-4">
+                                                            <form class="form">
+                                                                <div class="form-group">   
+                                                                     
+                                                                    <select name="" class="form-control" required="required">
+                                                                        <option value="">Select</option>
+                                                                    </select>
+                                                                </div> 
+                                                            </form>
+                                                        </div>
+                                                        <div class="col-md-8">
+                                                                    <!-- <div class="text-right">
+                                                                        <a href="/Admin/Add_Notice" class="round-btn">
+                                                                            <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512" style="width: 18px; fill: #fff; " xml:space="preserve">
+                                                                                <g>
+                                                                                    <g>
+                                                                                        <path d="M492,236H276V20c0-11.046-8.954-20-20-20c-11.046,0-20,8.954-20,20v216H20c-11.046,0-20,8.954-20,20s8.954,20,20,20h216
+                                                                                            v216c0,11.046,8.954,20,20,20s20-8.954,20-20V276h216c11.046,0,20-8.954,20-20C512,244.954,503.046,236,492,236z"/>
+                                                                                    </g>
+                                                                                </g> 
+                                                                            </svg>
+                                                                            <small class="ml-2">Add Notice</small>
+                                                                        </a>
+                                                                    </div> -->
+                                                                </div>
+        
+                                                    </div>
+                                                    <div class="row mt-4">
+                                                        <div class="col-md-12 data-list">
+                                                            <div class="res-table table-responsive">
+                                                                <table id="premises-tbl" class="table table-bordered table-striped">
+                                                                    <thead>
+                                                                        <tr>
+                                                                            <th>Subject</th>
+                                                                            <th>Mark</th>
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody>
+                                                                        <%record.forEach(function(p){ %>
+                                                                            <tr>
+                                                                                
+                                                                                <td><%=p.Subject%></td>
+                                                                                <td><%=p.Mark%></td>
+                                                                               
+                                                                            </tr>
+                                                                        <% })%> 
+                                                                    </tbody>
+                                                                </table>
+                                                            </div>
+                                                        </div> 
+                                                    </div>
+                                                    
+                                                </div>
+                                            </div> 
+
+                                        </div> 
+
+                                    </div>
+                                </div>
+                             </div>  
+                        </div> 
+                    </div>
+                </div> 
+            </div>
+        </div> 
+
+
+        <%- include('./partials/Teacher_footer.ejs') %>
+
+
+
+        <!-- RequirementModal -->
+        <div class="modal" id="model-view">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content"> 
+
+                    <div class="modal-header">
+                        <h4 class="modal-title">Visitorz Details</h4>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+ 
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="col-md-12"> 
+                                <table class="table table-bordered"> 
+                                    <tbody>
+                                        <tr>
+                                            <td><strong>Name</strong></td>
+                                            <td>Piyush Tapaniya</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>Mobile No</strong></td>
+                                            <td>+91 9876543210</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>Check In</strong></td>
+                                            <td>09*:00am</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>Check Out</strong></td>
+                                            <td>6:00pm</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>Address</strong></td>
+                                            <td>London has the best universities around the world.</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div> 
+                    </div> 
+
+                </div>
+            </div>
+        </div>
+        
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script type="text/javascript" src="/asset/js/jquery.min.js"></script> 
+        <script type="text/javascript" src="/asset/bootstrap/js/popper.min.js"></script> 
+        <script type="text/javascript" src="/asset/bootstrap/js/bootstrap.min.js"></script> 
+        <script type="text/javascript" src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script>   
+
+        <script type="text/javascript" src="/asset/js/custome.js"></script>         
+        <script type="text/javascript">
+            $(document).ready(function() {
+                $('#premises-tbl').DataTable();
+            });
+        </script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/toastr.js/2.0.2/js/toastr.min.js"></script>
+
+<script>
+    $(document).ready(function() {
+      let toastme= "<%=first_array%>"
+  
+      if(toastme  != ''){
+        toastr.success(toastme)
+  
+      }
+    })
+  
+  
+    $(document).ready(function() {
+      let toastme= "<%=second_array%>"
+  
+      if(toastme  != ''){
+        toastr.error(toastme)
+  
+      }
+    })
+    
+</script>
+    </body> 
+</html>

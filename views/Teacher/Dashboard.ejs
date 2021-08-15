@@ -1,0 +1,223 @@
+
+<%- include('./partials/Teacher_header.ejs') %>
+<% let first_array = []%>
+  <% success.forEach(function(msg){ %>
+      
+          <%first_array.push(msg)%>
+
+
+      <% }) %>
+      <% let second_array = []%>
+
+      <% errors.forEach(function(err){ %>
+
+              <%second_array.push(err)%>
+
+          <% }) %>
+
+
+
+        <div class="content-wrapper mt-5">
+            <!-- Welcome to  -->
+            <div class="page-content pt-5 pb-3 box-mainsection">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-xl-2 col-lg-3 col-md-4 mb-3 "> 
+                            <div class="white-box sidebar sticky-sidebar">
+                                <div class="card card-default">
+                                    <div class="box-card-title">
+                                        <div class="p-3 card-box-title">
+                                            <h6 class="m-0 text-color">
+                                                <strong>Services</strong>
+                                                <!-- <a href="javascript:void(0);" class="viewall-btn"><small>View all</small></a> -->
+                                            </h6>
+                                        </div>                            
+                                    </div>
+                                    <%- include('./partials/Teacher_Menu.ejs') %>
+
+                                </div> 
+                            </div> 
+
+                        </div>
+
+                        <div class="col-xl-10 col-lg-9 col-md-8">
+                            <div class="right-bar"> 
+                                <div class="row ">
+                                    <div class="col-md-12">
+                                        <div class="totla-card-box">
+                                            <div class="row">
+                                                <div class="col-xl-4 col-lg-4 col-md-12">
+                                                    <div class="main-box">
+                                                        <span class="bcak-effect"></span>
+                                                        <a href="">
+                                                            <div class="visitorz-box box-today">
+                                                                <h3 class="card-ammount text-color mb-0"><strong><%=Stud%></strong></h3>
+                                                                <h6 class="card-name m-0 mt-2"><span>No of Students</span></h6>
+                                                            </div>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                                                                       
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div> 
+                                <div class="row mt-4">
+                                    <div class="col-md-12">
+                                        
+                                        <!-- <div class="row mt-4 mb-4">
+                                            <div class="col-md-12">
+                                                <ul class="pagination justify-content-center">
+                                                    <li class="disabled px-1">
+                                                        <a href="#" aria-label="Previous">
+                                                            <svg class="svg-inline--fa fa-arrow-left fa-w-14" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="arrow-left" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" data-fa-i2svg=""><path fill="currentColor" d="M257.5 445.1l-22.2 22.2c-9.4 9.4-24.6 9.4-33.9 0L7 273c-9.4-9.4-9.4-24.6 0-33.9L201.4 44.7c9.4-9.4 24.6-9.4 33.9 0l22.2 22.2c9.5 9.5 9.3 25-.4 34.3L136.6 216H424c13.3 0 24 10.7 24 24v32c0 13.3-10.7 24-24 24H136.6l120.5 114.8c9.8 9.3 10 24.8.4 34.3z"></path></svg> 
+                                                        </a>
+                                                    </li>
+                                                    <li class="px-1">
+                                                        <a href="#">1</a>
+                                                    </li>
+                                                    <li class="active px-1">
+                                                        <a href="#">2</a>
+                                                    </li>
+                                                    <li class="px-1">
+                                                        <a href="#">3</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#" aria-label="Next">
+                                                            <svg class="svg-inline--fa fa-arrow-right fa-w-14" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="arrow-right" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" data-fa-i2svg=""><path fill="currentColor" d="M190.5 66.9l22.2-22.2c9.4-9.4 24.6-9.4 33.9 0L441 239c9.4 9.4 9.4 24.6 0 33.9L246.6 467.3c-9.4 9.4-24.6 9.4-33.9 0l-22.2-22.2c-9.5-9.5-9.3-25 .4-34.3L311.4 296H24c-13.3 0-24-10.7-24-24v-32c0-13.3 10.7-24 24-24h287.4L190.9 101.2c-9.8-9.3-10-24.8-.4-34.3z"></path></svg> 
+                                                        </a>
+                                                    </li>
+                                                </ul>
+
+                                            </div>
+                                        </div> -->
+                                    </div>
+                                </div>
+                             </div>  
+                        </div> 
+                    </div>
+                </div> 
+            </div>
+        </div> 
+
+
+
+        <%- include('./partials/Teacher_footer.ejs') %>
+
+
+        <!-- RequirementModal -->
+        <div class="modal" id="RequirementModal">
+            <div class="modal-dialog">
+                <div class="modal-content"> 
+
+                    <div class="modal-header">
+                        <h4 class="modal-title">Steps for service activation</h4>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+ 
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <ul class="m-0 list-inline box-activation">
+                                    <li class="">
+                                        <div class="d-flex">
+                                            <div class="activation-icons">
+                                                <span><i class="fa fa-money" aria-hidden="true"></i></span>
+                                            </div>
+                                            <div class="steps-Payment ml-3">
+                                                <h6><strong>Payment</strong></h6>
+                                                <p>Step 1: Process the payment for this service.</p>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="">
+                                        <div class="d-flex">
+                                            <div class="activation-icons">
+                                                <span><i class="fa fa-user" aria-hidden="true"></i></span>
+                                            </div>
+                                            <div class="steps-Profile ml-3">
+                                                <h6><strong>Profile Update</strong></h6>
+                                                <p>Step 2: Profile Update for amazon. please enter the aadhaar card details.</p>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="">
+                                        <div class="d-flex">
+                                            <div class="activation-icons">
+                                                <span><i class="fa fa-comments" aria-hidden="true"></i></span>
+                                            </div>
+                                            <div class="steps-Verification ml-3">
+                                                <h6><strong>Profile Verification</strong></h6>
+                                                <p>Step 3: Check your profile details are verfied from our side.</p>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="">
+                                        <div class="d-flex">
+                                            <div class="activation-icons">
+                                                <span><i class="fa fa-long-arrow-up" aria-hidden="true"></i></span>
+                                            </div>
+                                            <div class="steps-Lauch ml-3">
+                                                <h6><strong>Lauch</strong></h6>
+                                                <p>Step 4: Lauch services.</p>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="">
+                                        <div class="d-flex">
+                                            <div class="activation-icons">
+                                                <span><i class="fa fa-envelope" aria-hidden="true"></i></span>
+                                            </div>
+                                            <div class="steps-Transaction ml-3">
+                                                <h6><strong>Transaction</strong></h6>
+                                                <p>Step 5: Training will be conducted by EasySell.</p>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div> 
+                    </div> 
+                </div>
+            </div>
+        </div>
+        
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script type="text/javascript" src="/asset/js/jquery.min.js"></script> 
+        <script type="text/javascript" src="/asset/bootstrap/js/popper.min.js"></script> 
+        <script type="text/javascript" src="/asset/bootstrap/js/bootstrap.min.js"></script> 
+        <script type="text/javascript" src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script>   
+
+        <script type="text/javascript" src="/asset/js/custome.js"></script>         
+        <script type="text/javascript">
+            $(document).ready(function() {
+                $('#example').DataTable();
+            });
+        </script>
+          <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+          <script src="//cdnjs.cloudflare.com/ajax/libs/toastr.js/2.0.2/js/toastr.min.js"></script>
+        
+        <script>
+            $(document).ready(function() {
+              let toastme= "<%=first_array%>"
+          
+              if(toastme  != ''){
+                toastr.success(toastme)
+          
+              }
+            })
+          
+          
+            $(document).ready(function() {
+              let toastme= "<%=second_array%>"
+          
+              if(toastme  != ''){
+                toastr.error(toastme)
+          
+              }
+            })
+            
+        </script>
+        
+    </body> 
+</html>

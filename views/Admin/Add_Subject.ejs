@@ -1,0 +1,199 @@
+<%- include('./partials/Admin_header.ejs') %>
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+<style type="text/css">
+    form .error {
+    color: #ff0000;
+    font-size: small;
+    font-weight: bold;
+    }
+</style>
+        <div class="content-wrapper mt-5">
+            <!-- Welcome to  -->
+            <div class="page-content pt-5 pb-3 box-mainsection">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-xl-2 col-lg-3 col-md-4 mb-3 "> 
+                            <div class="white-box sidebar sticky-sidebar">
+                                <div class="card card-default">
+                                    <div class="box-card-title">
+                                        <div class="p-3 card-box-title">
+                                            <h6 class="m-0 text-color">
+                                                <strong>Services</strong>
+                                                
+                                            </h6>
+                                        </div>                            
+                                    </div>
+                                    <%- include('./partials/Admin_Menu.ejs') %>
+
+                                </div> 
+                            </div> 
+
+                        </div>
+
+                        <div class="col-xl-10 col-lg-9 col-md-8">
+                            <div class="right-bar">  
+                                <div class="row">
+                                    <% if(update==false) {%>
+                                        <div class="col-md-12">
+                                            <form class="form" id="Addsubject" method="POST" action="/Admin/Add_Subject">
+                                                <div class="white-box mt-2">
+                                                    <div class="card card-default"> 
+                                                        <div class="box-card-title">
+                                                            <div class="p-3 card-box-title">
+                                                                <h5 class="m-0 d-flex justify-content-between text-color">
+                                                                    <strong>Add Subject</strong> 
+                                                                </h5>
+                                                            </div>                            
+                                                        </div> 
+                                                        <div class="p-4">  
+                                                            <div class="row">
+                                                                <div class="col-md-4">
+                                                                    <div class="form-group">  
+                                                                        <label class="form-lbl">Subject Name</label> 
+                                                                        <input type="text" name="Subject"  class="form-control" value="">
+                                                                    </div>
+                                                                </div>
+                                                                
+                                                            </div>
+                                                             
+                                                        </div> 
+                                                    </div>  
+                                                </div> 
+                                                 
+                                                <div class="btn-box">
+                                                    <div class="text-center mt-4">
+                                                        <button class="round-btn"> Add Subject</button>
+                                                    </div>
+                                                </div>
+                                            </form>
+    
+                                        </div>
+                                    <% } else { %>
+                                        <div class="col-md-12">
+                                            <form class="form" id="Addsubject" method="POST" action="/Admin/updatesub/<%=com._id%>">
+                                                <div class="white-box mt-2">
+                                                    <div class="card card-default"> 
+                                                        <div class="box-card-title">
+                                                            <div class="p-3 card-box-title">
+                                                                <h5 class="m-0 d-flex justify-content-between text-color">
+                                                                    <strong>Update Subject</strong> 
+                                                                </h5>
+                                                            </div>                            
+                                                        </div> 
+                                                        <div class="p-4">  
+                                                            <div class="row">
+                                                                <div class="col-md-4">
+                                                                    <div class="form-group">  
+                                                                        <label class="form-lbl">Subject Name</label> 
+                                                                        <input type="text" name="Subject"  class="form-control" value="<%=com.Subject%>">
+                                                                    </div>
+                                                                </div>
+                                                                
+                                                            </div>
+                                                             
+                                                        </div> 
+                                                    </div>  
+                                                </div> 
+                                                 
+                                                <div class="btn-box">
+                                                    <div class="text-center mt-4">
+                                                        <button class="round-btn"> Update Subject</button>
+                                                    </div>
+                                                </div>
+                                            </form>
+    
+                                        </div>
+                                    <% } %>
+                                </div>
+                             </div>  
+                        </div> 
+                    </div>
+                </div> 
+            </div>
+        </div>
+
+        <%- include('./partials/Admin_footer.ejs') %>
+
+
+
+        <!-- RequirementModal -->
+        <div class="modal" id="model-view">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content"> 
+
+                    <div class="modal-header">
+                        <h4 class="modal-title">Premises Details</h4>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+ 
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="col-md-12"> 
+                                <table class="table table-bordered"> 
+                                    <tbody>
+                                        <tr>
+                                            <td><strong>Logo</strong></td>
+                                            <td>
+                                                <img src="asset/images/Premises/logo2.png" class="img-fluid" alt="" width="80px">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>Name</strong></td>
+                                            <td>Piyush Tapaniya</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>Contact No</strong></td>
+                                            <td>+91 9876543210</td>
+                                        </tr> 
+                                        <tr>
+                                            <td><strong>Contact Person</strong></td>
+                                            <td>Punit Bhai</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>Contact Person Mail</strong></td>
+                                            <td>piyusht@keyconcepts.co.on</td>
+                                        </tr> 
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div> 
+                    </div> 
+
+                </div>
+            </div>
+        </div>
+        
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script type="text/javascript" src="/asset/js/jquery.min.js"></script> 
+        <script type="text/javascript" src="/asset/bootstrap/js/popper.min.js"></script> 
+        <script type="text/javascript" src="/asset/bootstrap/js/bootstrap.min.js"></script> 
+        <script type="text/javascript" src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script>   
+
+        <script type="text/javascript" src="/asset/js/custome.js"></script>         
+        <script type="text/javascript">
+            $(document).ready(function() {
+                $('#premises-tbl').DataTable();
+            });
+        </script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.2/dist/jquery.validate.min.js"></script> 
+        
+                <script> 
+                    $("#Addsubject").validate({
+                        rules: {
+                            Subject: {
+                                required: true
+                            }
+                        },
+                        messages: {
+                            Subject: {
+                                required: "Please enter the Subject name"
+                            }
+                        }
+                    });
+        
+                </script>
+        
+        
+    </body> 
+</html>

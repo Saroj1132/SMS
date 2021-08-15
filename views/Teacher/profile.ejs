@@ -1,0 +1,205 @@
+<%- include('./partials/Teacher_header.ejs') %>
+<title>Profile - Visitorz.io</title>
+
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+<style type="text/css">
+    form .error {
+    color: #ff0000;
+    font-size: small;
+    font-weight: bold;
+    }
+</style>
+
+        <div class="content-wrapper mt-5">
+            <!-- Welcome to  -->
+            <div class="page-content pt-5 pb-3 box-mainsection">
+                <div class="container-fluid">
+                    <% let first_array = []%>
+                            <% success.forEach(function(msg){ %>
+                                
+                                    <%first_array.push(msg)%>
+                          
+                          
+                                <% }) %>
+                                <% let second_array = []%>
+                          
+                                <% errors.forEach(function(err){ %>
+                          
+                                        <%second_array.push(err)%>
+                          
+                                    <% }) %>
+                    <div class="row">
+                        <div class="col-xl-2 col-lg-3 col-md-4 mb-3 "> 
+                            <div class="white-box sidebar sticky-sidebar">
+                                <div class="card card-default">
+                                    <div class="box-card-title">
+                                        <div class="p-3 card-box-title">
+                                            <h6 class="m-0 text-color">
+                                                <strong>Services</strong>
+                                                
+                                            </h6>
+                                        </div>                            
+                                    </div>
+                                    <%- include('./partials/Teacher_Menu.ejs') %>
+
+                                </div> 
+                            </div> 
+
+                        </div>
+
+                        <div class="col-xl-10 col-lg-9 col-md-8">
+                            <div class="right-bar">  
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <form class="form" id="Profile" action="/Teacher/chengeprofile" method="POST">
+                                            <div class="white-box mt-2">
+                                                <div class="card card-default"> 
+                                                    <div class="box-card-title">
+                                                        <div class="p-3 card-box-title">
+                                                                <h5 class="m-0 d-flex justify-content-between text-color">
+                                                                    <strong>Change Profile</strong> 
+                                                                </h5>
+                                                    </div>                            
+                                                    </div> 
+                                                    <div class="p-4">  
+                                                        <div class="row">
+                                                            
+                                                            <div class="col-md-4">
+                                                                <div class="form-group">  
+                                                                    <label class="form-lbl">Name<span style="color:red">*</span></label> 
+                                                                    <input type="text" name="Name"  class="form-control" value="<%=teac.Name%>">
+                                                                </div>
+                                                                    
+                                                            </div>
+                                                            <div class="col-md-4">
+                                                                <div class="form-group">  
+                                                                    <label class="form-lbl">Email<span style="color:red">*</span></label> 
+                                                                    <input type="text" name="Email" readonly  class="form-control" value="<%=teac.Email%>">
+                                                                </div>
+                                                                
+                                                            </div>
+                                                            <div class="col-md-4">
+                                                                <div class="form-group">  
+                                                                    <label class="form-lbl">Mobile<span style="color:red">*</span></label> 
+                                                                    <input type="text" name="MobileNo"  class="form-control" readonly value="<%=teac.MobileNo%>">
+                                                                </div>
+                                                                
+                                                        </div>
+                                                            
+                                                        </div>
+                                                        <div class="row">
+                                                            
+                                                            <div class="col-md-4">
+                                                                <div class="form-group">  
+                                                                    <label class="form-lbl">Teacher_Id<span style="color:red">*</span></label> 
+                                                                    <input type="text" name="Teacher_Id" readonly class="form-control" value="<%=teac.Teacher_Id%>">
+                                                                </div>
+                                                                    
+                                                            </div>
+                                                            <div class="col-md-4">
+                                                                <div class="form-group">  
+                                                                    <label class="form-lbl">Class<span style="color:red">*</span></label> 
+                                                                    <input type="text" name="Class" readonly  class="form-control" value="<%=teac.Class%>">
+                                                                </div>
+                                                                
+                                                            </div>
+                                                            
+                                                            </div>
+                                                            
+                                                        </div>
+                                                        
+                                                    </div> 
+                                                    
+
+                                                </div>  
+                                            </div> 
+
+
+                                                <div class="btn-box" >
+                                                    <div class="text-center mt-4" >
+                                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                        &nbsp;&nbsp;&nbsp;<button class="round-btn">Change Profile</button=>
+                                                    </div>
+                                                </div>
+                                                
+
+                                        </form>  
+
+                                    </div>
+                                </div>
+                             </div>  
+                        </div> 
+
+                    </div>
+                </div> 
+            </div>
+        </div> 
+
+<%- include('./partials/Teacher_footer.ejs') %>
+
+        <!-- RequirementModal -->
+        
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script type="text/javascript" src="/admin/asset/js/jquery.min.js"></script> 
+        <script type="text/javascript" src="/admin/asset/bootstrap/js/popper.min.js"></script> 
+        <script type="text/javascript" src="/admin/asset/bootstrap/js/bootstrap.min.js"></script> 
+        <script type="text/javascript" src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script>   
+
+        <script type="text/javascript" src="/admin/asset/js/custome.js"></script>         
+        <script type="text/javascript">
+            $(document).ready(function() {
+                $('#premises-tbl').DataTable();
+            });
+        </script>
+        
+<script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.2/dist/jquery.validate.min.js"></script> 
+
+<script> 
+    $("#Profile").validate({
+        rules: {
+            Name: {
+                required: true
+            }
+        },
+        messages: {
+            Name: {
+                required: "Please enter Name"
+            }
+        }
+    });
+
+</script>
+
+    
+<script src="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+    
+<script>
+    $(document).ready(function() {
+      let toastme= "<%=first_array%>"
+  
+      if(toastme  != ''){
+        toastr.success(toastme)
+  
+      }
+    })
+  
+  
+    $(document).ready(function() {
+      let toastme= "<%=second_array%>"
+  
+      if(toastme  != ''){
+        toastr.error(toastme)
+  
+      }
+    })
+  </script>
+    
